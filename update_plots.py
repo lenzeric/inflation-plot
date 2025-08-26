@@ -10,6 +10,8 @@ Original file is located at
 
 ## Main execution
 """
+# Always reset directory before shell commands
+# %cd /content
 
 # Commented out IPython magic to ensure Python compatibility.
 import requests
