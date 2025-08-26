@@ -17,8 +17,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from datetime import datetime
-from getpass import getpass
 import os
+import matplotlib.ticker as mticker
 
 # Always reset directory before shell commands
 # %cd /content
@@ -101,21 +101,3 @@ plt.tight_layout()
 plt.savefig("inflation_plot.png", bbox_inches="tight", dpi=300)
 plt.show()
 print("✅ Saved inflation_plot.png")
-
-# Ask once for token (hidden input in Colab)
-if "GITHUB_TOKEN" not in globals():
-    GITHUB_TOKEN = getpass("Enter your GitHub token (hidden): ")
-
-# Git setup
-!git init git checkout -b main || git checkout main
-!git remote remove origin || true
-!git remote add origin https://$GITHUB_TOKEN@github.com/lenzeric/inflation-plot.git
-!git pull origin main || true
-
-# Stage and commit updated plot
-!git add inflation_plot.png
-!git commit -m "Update inflation plot" || echo "No changes to commit"
-
-# Ensure branch is named main
-!git branch -M main
-!git push origin main
