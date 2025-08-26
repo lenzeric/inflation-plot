@@ -20,13 +20,6 @@ from datetime import datetime
 import os
 import matplotlib.ticker as mticker
 
-# Always reset directory before shell commands
-# %cd /content
-
-# Set Git identity for this Colab session
-!git config --global user.email "lenz.eric@gmail.com"
-!git config --global user.name "lenzeric"
-
 # ========== BLS CPI Inflation Plot ==========
 # BLS API key
 API_KEY = 'f835522d726c44f3bc36936bd1e1c571'
