@@ -1,0 +1,6 @@
+pandas
+matplotlib
+requests
+datetime
+getpass
+os
